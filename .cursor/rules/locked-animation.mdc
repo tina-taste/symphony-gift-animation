@@ -3,7 +3,7 @@ description: The taste grid is a locked design asset. Do not edit it.
 globs:
   - src/components/TasteGrid/**/*
   - src/animation/settings.lock.json
-  - public/plates/**/*
+  - public/frames/col-*.png
   - animation.lock.json
 alwaysApply: false
 ---

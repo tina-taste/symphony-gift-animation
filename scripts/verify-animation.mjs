@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Fails if the taste grid, its motion, or its plates differ from animation.lock.json.
+ * Fails if the taste grid, its motion, or its column cards differ from animation.lock.json.
  */
 
 import { createHash } from "node:crypto";

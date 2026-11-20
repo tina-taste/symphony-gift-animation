@@ -22,7 +22,7 @@ export default async function Image() {
           background: "#1e1e1e",
         }}
       >
-        <img src={wordmark} width={870} height={60} />
+        <img src={wordmark} width={870} height={60} alt="Taste Preference" />
       </div>
     ),
     { ...size },

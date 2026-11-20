@@ -1,16 +1,12 @@
 import locked from "./settings.lock.json";
 
-export const VARIANTS = ["columns"] as const;
 export const MOTIONS = ["drift", "turn"] as const;
 export const LEADS = ["rise", "fall"] as const;
 
-export type VariantName = (typeof VARIANTS)[number];
 export type MotionName = (typeof MOTIONS)[number];
 export type LeadName = (typeof LEADS)[number];
 
 export type AnimationSettings = {
-  /** Which animation is on the graphic. */
-  variant: VariantName;
   /** One pass of a column, in milliseconds. */
   duration: number;
   /** Space between photographs in a column, in pixels. */
@@ -36,12 +32,10 @@ function clamp(value: number, [min, max]: readonly [number, number]) {
 export function sanitizeSettings(input: unknown): AnimationSettings | null {
   if (!input || typeof input !== "object") return null;
   const value = input as Record<string, unknown>;
-  const variant = VARIANTS.find((name) => name === value.variant) ?? "columns";
   const motion = MOTIONS.find((name) => name === value.motion);
   const lead = LEADS.find((name) => name === value.lead);
   if (!motion || !lead) return null;
   return {
-    variant,
     duration: Math.round(clamp(Number(value.duration), LIMITS.duration)),
     gap: Math.round(clamp(Number(value.gap), LIMITS.gap)),
     motion,

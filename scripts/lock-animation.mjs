@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Re-signs the taste grid after design has approved a change.
- * Hashes the grid component, the locked motion, and the plate images.
+ * Hashes the grid component, the locked motion, and the column cards.
  */
 
 import { createHash } from "node:crypto";
@@ -17,12 +17,8 @@ const locked = [
   "src/components/TasteGrid/tiles.ts",
   "src/components/TasteGrid/index.ts",
   "src/animation/settings.lock.json",
-  ...readdirSync(path.join(ROOT, "public", "plates"))
-    .filter((name) => name.endsWith(".png"))
-    .sort()
-    .map((name) => `public/plates/${name}`),
   ...readdirSync(path.join(ROOT, "public", "frames"))
-    .filter((name) => name.endsWith(".png"))
+    .filter((name) => /^col-\d+-\d+\.png$/.test(name))
     .sort()
     .map((name) => `public/frames/${name}`),
 ];

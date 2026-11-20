@@ -1,7 +1,6 @@
 {
   "note": "Locked motion for the taste grid. Signed off from the design bench. Do not edit by hand; lock again from the bench or run npm run lock:animation after design approves a change.",
   "settings": {
-    "variant": "columns",
     "duration": 24000,
     "gap": 16,
     "motion": "drift",

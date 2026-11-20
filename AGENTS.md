@@ -6,7 +6,7 @@ These files are locked. Do not edit them, and do not work around them:
 
 - `src/components/TasteGrid/` (the grid, the tile positions, the easing curves, the motion)
 - `src/animation/settings.lock.json` (the signed motion values)
-- `public/plates/` (the nine photographs)
+- `public/frames/col-*.png` (the column cards)
 - `animation.lock.json` (the signature `npm run verify:animation` and `npm run build` check)
 
 Design owns the motion. It ships exactly as approved.

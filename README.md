@@ -40,7 +40,7 @@ import { TasteGrid } from "@/components/TasteGrid";
 npm run verify:animation
 ```
 
-This fails if the grid component, the locked motion, or the plate images differ from `animation.lock.json`. It also runs before `npm run build`.
+This fails if the grid component, the locked motion, or the column cards differ from `animation.lock.json`. It also runs before `npm run build`.
 
 Changing the motion:
 

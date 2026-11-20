@@ -20,7 +20,7 @@ A bench for the photograph grid on Symphony’s thank-you screen. Design tunes t
 
 ## Positioning
 
-The screen and the nine photographs stay as designed. Only the motion is tunable, and the locked file is the version engineering implements. `npm run verify:animation` fails the build if that version drifts.
+The thank-you screen and the column cards stay as designed. Only the motion is tunable, and the locked file is the version engineering implements. `npm run verify:animation` fails the build if that version drifts.
 
 ## Operating Context
 
@@ -28,8 +28,8 @@ Used at a desk while matching the Symphony Design System frame “Your taste is 
 
 ## Capabilities and Constraints
 
-- The grid is the right-hand graphic from Figma node `2378:2011` / collage `2378:2062`.
-- Photographs are the nine images already inside that graphic. No separate image set was attached.
+- The graphic is the three-column collage on the thank-you screen. Each column keeps its cards in order and loops.
+- The cards are `public/frames/col-*.png`.
 - Lock writes `src/animation/settings.lock.json` in local dev. A production deploy does not accept lock writes.
 - Matter is the Symphony face used on the screen.
 
