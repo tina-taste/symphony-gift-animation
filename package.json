@@ -1,0 +1,27 @@
+{
+  "name": "animation-images",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Taste grid for the Symphony thank-you screen. Tune the motion, lock it, and send engineering the review link.",
+  "scripts": {
+    "dev": "next dev",
+    "prebuild": "npm run verify:animation",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "verify:animation": "node scripts/verify-animation.mjs",
+    "lock:animation": "node scripts/lock-animation.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.6",
+    "next": "^16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,119 @@
+.frame {
+  width: 100%;
+  aspect-ratio: 466.69 / 529.38;
+  container-type: inline-size;
+  position: relative;
+}
+
+.plate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  gap: 10px;
+  width: 466.69px;
+  height: 529.38px;
+  transform: scale(calc(100cqw / 466.69px));
+  transform-origin: top left;
+  overflow: hidden;
+  background: #dadecf;
+  border-radius: 86px;
+}
+
+.column {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  flex-direction: column;
+  animation-duration: var(--duration);
+  animation-timing-function: var(--ease);
+  animation-iteration-count: infinite;
+  animation-delay: calc(var(--index) * var(--duration) * -0.22);
+}
+
+.set {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding-bottom: var(--gap);
+}
+
+.track[data-paused="true"] {
+  animation-play-state: paused;
+}
+
+.card {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.track[data-motion="drift"][data-direction="up"] {
+  animation-name: rise;
+}
+
+.track[data-motion="drift"][data-direction="down"] {
+  animation-name: fall;
+}
+
+.track[data-motion="turn"][data-direction="up"] {
+  animation-name: turn-up;
+  animation-direction: alternate;
+}
+
+.track[data-motion="turn"][data-direction="down"] {
+  animation-name: turn-down;
+  animation-direction: alternate;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-50%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes turn-up {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-18%);
+  }
+}
+
+@keyframes turn-down {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(18%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}

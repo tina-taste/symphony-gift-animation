@@ -1,0 +1,9 @@
+# The taste grid is a locked design asset: changes need design's review.
+/src/components/TasteGrid/    @tina-taste
+/src/animation/settings.lock.json  @tina-taste
+/public/plates/               @tina-taste
+/animation.lock.json          @tina-taste
+/scripts/                     @tina-taste
+/.github/                     @tina-taste
+/AGENTS.md                    @tina-taste
+/.cursor/rules/               @tina-taste

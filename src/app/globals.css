@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #1e1e1e;
+  color: #f5f7f2;
+  font-family: var(--font-matter), "Matter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100%;
+}
+
+button,
+select,
+input {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: #3a3b39;
+  color: #f5f7f2;
+}
+
+:focus-visible {
+  outline: 2px solid #f5f7f2;
+  outline-offset: 2px;
+}

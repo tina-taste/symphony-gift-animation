@@ -1,0 +1,11 @@
+---
+description: The taste grid is a locked design asset. Do not edit it.
+globs:
+  - src/components/TasteGrid/**/*
+  - src/animation/settings.lock.json
+  - public/plates/**/*
+  - animation.lock.json
+alwaysApply: false
+---
+
+The taste grid is signed off by design. Do not edit these files, their easing, timing, tile positions, or photographs. Do not hand-edit `animation.lock.json`. If a task needs a motion change, stop and say it has to be locked from the bench by design.

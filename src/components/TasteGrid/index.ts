@@ -1,0 +1,1 @@
+export { TasteGrid } from "./TasteGrid";

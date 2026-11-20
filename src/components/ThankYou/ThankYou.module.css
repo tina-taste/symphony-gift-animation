@@ -1,0 +1,113 @@
+.screen {
+  height: 100%;
+  min-height: 0;
+  background: #121212;
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.artboard {
+  position: relative;
+  height: 100%;
+  max-width: 100%;
+  aspect-ratio: 1952 / 1014;
+  container-type: inline-size;
+}
+
+.title {
+  position: absolute;
+  left: calc(214 / 1952 * 100%);
+  top: calc(381 / 1014 * 100%);
+  width: calc(620 / 1952 * 100%);
+  margin: 0;
+  font-size: calc(100 / 1952 * 100cqi);
+  font-weight: 400;
+  line-height: 1.19;
+  letter-spacing: calc(-3 / 1952 * 100cqi);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.sub {
+  position: absolute;
+  left: calc(406 / 1952 * 100%);
+  top: calc(516 / 1014 * 100%);
+  width: calc(390 / 1952 * 100%);
+  margin: 0;
+  font-family: var(--font-azeret), "Azeret Mono", monospace;
+  font-size: calc(12 / 1952 * 100cqi);
+  font-weight: 400;
+  line-height: calc(14 / 1952 * 100cqi);
+  letter-spacing: calc(-0.36 / 1952 * 100cqi);
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.actions {
+  position: absolute;
+  left: calc(406 / 1952 * 100%);
+  top: calc(569.5 / 1014 * 100%);
+  display: flex;
+  align-items: center;
+  gap: calc(24 / 1952 * 100cqi);
+}
+
+.claim,
+.back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  font-family: inherit;
+  font-size: calc(14 / 1952 * 100cqi);
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: calc(-0.42 / 1952 * 100cqi);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.claim {
+  box-sizing: border-box;
+  height: calc(37 / 1952 * 100cqi);
+  min-width: calc(56 / 1952 * 100cqi);
+  padding: 0 calc(12 / 1952 * 100cqi);
+  border-radius: calc(7.53581 / 1952 * 100cqi);
+  background: #e4e6e1;
+  color: #121212;
+}
+
+.claim:hover {
+  background: #d8dbd4;
+}
+
+.back {
+  gap: calc(8 / 1952 * 100cqi);
+  padding: 0;
+  background: transparent;
+  color: #fff;
+}
+
+.back:hover {
+  color: #d9d9d9;
+}
+
+.mark {
+  display: block;
+  width: calc(12.873 / 1952 * 100cqi);
+  height: calc(12.0684 / 1952 * 100cqi);
+}
+
+.claim:focus-visible,
+.back:focus-visible {
+  outline: calc(2 / 1952 * 100cqi) solid #fff;
+  outline-offset: calc(3 / 1952 * 100cqi);
+}
+
+.graphic {
+  position: absolute;
+  left: calc(920 / 1952 * 100%);
+  top: calc(242 / 1014 * 100%);
+  width: calc(466.69 / 1952 * 100%);
+}
